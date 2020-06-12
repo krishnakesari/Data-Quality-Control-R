@@ -42,3 +42,21 @@ t(num.mat) # Transposed Matrix
 
 t(num.mat) %*% num.mat # Multiplication
 
+# Arrays - Arrays can be multidimensional compared to 2x2 nature of matrix  or list
+mat.array = array(dim =c(2,2,3))
+
+set.seed(12345)
+mat.array[,,1] <- rnorm(4)
+mat.array[,,2] <- rnorm(4)
+mat.array[,,3] <- rnorm(4)
+mat.array
+
+
+# Checking missing data
+missing_data <- data.frame(v1 = c(1, NA, 0, 1), v2 = c("M", "F", NA, "M"))
+missing_data
+
+is.na(missing_data)
+is.na(missing_data$v1)
+
+any(is.na(missing_data))
