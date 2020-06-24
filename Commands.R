@@ -32,7 +32,3 @@ num2factor <- cut(numvar, breaks = 5, labels=c("lowest group",
 
 data.frame(table(num2factor))
 
-# Creating factor variables using conditional statement
-num2factor <- factor(ifelse(numvar<=-1.37,1,ifelse(numvar<=- 
-0.389,2,ifelse(numvar<=0.592,-3,ifelse(numvar<=1.57,-4,5)))),las=c("(-2.35,-1.37]", "(-1.37,-0.389]", 
-"(-0.389,0.592]", "(0.592,1.57]",  "(1.57,2.55]"))
