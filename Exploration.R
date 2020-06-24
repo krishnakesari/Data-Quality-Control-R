@@ -5,3 +5,4 @@ data <- read.csv("Titanic.csv")
 colnames(data)
 str(data)
 
+unique(data$Name)
