@@ -31,7 +31,12 @@ iris.grouped.summary <- summarize(iris.grouped, count = n(),
 filter(iris.grouped.summary, meanSL == max(meanSL) | meanSW == max(meanSW))
 
 # Chaining dplyr Operations
-
+iris %>%
+    group_by(Species) %>%
+    select(Sepal.Length, Sepal.Width) %>%
+    summarise(meanSL = mean(Sepal.Length),
+              sdSL = sd(Sepal.Length)) %>%
+    filter(meanSL == max(meanSL) | sdSL == max(sdSL))
 
 
 
