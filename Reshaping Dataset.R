@@ -29,3 +29,5 @@ cast(Titanic_cast, ...~variable)  # Melting by specifying only rows
 
 cast(Titanic_cast, ...~Survived)
 
+## Making long table
+long_titanic <- reshape(Titanic, direction = "long", idvar = "id")
