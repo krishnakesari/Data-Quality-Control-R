@@ -36,3 +36,12 @@ class(iris_mean3)
 iris_mean3$'1'
 iris_mean3$'2'
 iris_mean3$'3'
+
+# Converting 3 dimensional array to 2 dimensional data
+## margins = 1 slices by row
+## margins = 2 slices by column
+## margins = c(1,2) slices by indvidual cells
+iris_dat <- adply(iris3, .margins=3)
+class(iris_dat)
+str(iris_dat)
+
