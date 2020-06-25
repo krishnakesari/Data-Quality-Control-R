@@ -15,3 +15,17 @@ mutate(iris4, SLsd=(Sepal.Length-mean(Sepal.Length))/sd(Sepal.Length))
 # Transmute - Drops old variables and only keeps newly created variables
 iris5 <- slice(iris, 20:30)
 transmute(iris5, SLsd=(Sepal.Length-mean(Sepal.Length))/sd(Sepal.Length))
+
+# Selecting distinct rows
+distinct(iris, Species, Petal.Width)
+
+# Column-wise summary statistics
+summarise(iris, meanSL = mean(Sepal.Length),
+                meanSW = mean(Sepal.Width))
+
+# Group-wise Operations
+iris.grouped <- group_by(iris, Species)
+summarize(iris.grouped, count = n(),
+                meanSL = mean(Sepal.Length),
+                meanSW = mean(Sepal.Width))
+
