@@ -29,3 +29,10 @@ iris_mean2 <- aaply(iris3,3, colMeans)
 iris_mean2
 class(iris_mean2)
 
+# Calculate column mean and output as a list
+iris_mean3 <- alply(iris3,3, colMeans)
+iris_mean3
+class(iris_mean3)
+iris_mean3$'1'
+iris_mean3$'2'
+iris_mean3$'3'
