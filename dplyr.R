@@ -18,3 +18,4 @@ iris.apply
 # Combining results
 iris.combine <- do.call(rbind,iris.apply)
 iris.combine
+
