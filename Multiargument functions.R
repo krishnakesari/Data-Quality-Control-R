@@ -1,3 +1,6 @@
+library(dplyr)
+library(plyr)
+
 parameter.dat <- data.frame(n=c(25,50,100,200,400), 
                             mean=c(0,2,3.5,2.5,0.1), 
                             sd=c(1,1.5,2,5,2))
